@@ -1,0 +1,17 @@
+{
+  "id": "which-way-is-north",
+  "title": "Which way is North?",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "Nyss",
+      "discord": "nysterian",
+      "email": "nysterian@gmail.com",
+      "flags": {}
+    }
+  ]
+}
