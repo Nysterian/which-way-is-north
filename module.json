@@ -13,5 +13,8 @@
       "email": "nysterian@gmail.com",
       "flags": {}
     }
+  ],
+  "scripts": [
+    "scripts/configForm.js"
   ]
 }
