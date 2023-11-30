@@ -1,7 +1,8 @@
 <hr>
 
+{{! Image }}
 <div class="form-group">
-    <label>Compass Image</label>
+    <label>{{ localize "which-way-is-north.sceneSettings.image.label" }}</label>
     <div class="form-fields">
         <label class="checkbox">
             <input type="checkbox" name="compass.enabled" {{checked enabled}}>
@@ -9,29 +10,32 @@
         {{filePicker type="image" target="compass.src"}}
         <input class="image" type="text" name="compass.src" placeholder="File Path" value="{{src}}">
     </div>
-    <p class="notes">Configure the image that is used for the compass.</p>
+    <p class="notes">{{ localize "which-way-is-north.sceneSettings.image.notes" }}</p>
 </div>
 
+{{! Dimensions }}
 <div class="form-group slim">
-    <label>Compass Dimensions <span class="units">(Pixels)</span></label>
+    <label>{{ localize "which-way-is-north.sceneSettings.dimensions.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.dimensions.unit" }})</span></label>
     <div class="form-fields">
-        <label>Width</label>
+        <label>{{ localize "which-way-is-north.sceneSettings.dimensions.formFields.width.label" }}</label>
         <input type="number" step="any" name="compass.width" value="{{width}}">
-        <label>Height</label>
+        <label>{{ localize "which-way-is-north.sceneSettings.dimensions.formFields.height.label" }}</label>
         <input type="number" step="any" name="compass.height" value="{{height}}">
     </div>
 </div>
 
+{{! Rotation }}
 <div class="form-group slim">
-    <label>Compass Rotation <span class="units">(Degrees)</span></label>
+    <label>{{ localize "which-way-is-north.sceneSettings.rotation.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.rotation.unit" }})</span></label>
     <div class="form-fields">
-        <label>Rotation</label>
+        <label>{{ localize "which-way-is-north.sceneSettings.rotation.formFields.rotation.label" }}</label>
         <input type="number" step="1" name="compass.rot" value="{{rot}}">
     </div>
 </div>
 
+{{! Opacity }}
 <div class="form-group">
-    <label>Compass Opacity <span class="units">(Percentage)</span></label>
+    <label>{{ localize "which-way-is-north.sceneSettings.opacity.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.opacity.unit" }})</span></label>
     <div class="form-fields">
         {{rangePicker name="compass.opacity" value=opacity min="0" max="1" step="0.05"}}
     </div>

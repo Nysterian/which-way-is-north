@@ -17,5 +17,12 @@
   "esmodules": [
     "scripts/configForm.js",
     "scripts/compass.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ]
 }
