@@ -14,7 +14,8 @@
       "flags": {}
     }
   ],
-  "scripts": [
-    "scripts/configForm.js"
+  "esmodules": [
+    "scripts/configForm.js",
+    "scripts/compass.js"
   ]
 }
