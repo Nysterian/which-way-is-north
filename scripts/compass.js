@@ -1,7 +1,7 @@
 import { moduleID, addElement, editElement, getMyFlag } from './common.js';
 
 export function updateCompass() {
-    const elementID = moduleID + '-compass';
+    const elementID = `${moduleID}-compass`;
     const src = getMyFlag('src');
     const rot = getMyFlag('rot');
     const width = getMyFlag('width');
@@ -10,22 +10,23 @@ export function updateCompass() {
     const enabled = getMyFlag('enabled');
 
     const visibility = enabled ? 'visible' : 'hidden';
+    const hrzOffset = Number(width) + 20
 
     let elementParams = {
         style: {
-            width: width + 'px',
-            height: height + 'px',
+            width: `${width}px`,
+            height: `${height}px`,
 
-            left: '-' + (Number(width) + 20) + 'px',
-            rotate: rot + 'deg',
+            left: `-${hrzOffset}px`,
+            rotate: `${rot}deg`,
 
             opacity: opacity,
             visibility: visibility,
-            backgroundImage: 'url(' + src + ')'
+            backgroundImage: `url(${src})`
         }
     }
 
-    if (document.querySelector('#' + elementID) == null) {
+    if (document.querySelector(`#${elementID}`) == null) {
         elementParams.id = elementID;
         elementParams.style.position = 'absolute';
         elementParams.style.top = '0px';

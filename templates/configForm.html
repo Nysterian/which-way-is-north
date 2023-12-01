@@ -5,10 +5,10 @@
     <label>{{ localize "which-way-is-north.sceneSettings.image.label" }}</label>
     <div class="form-fields">
         <label class="checkbox">
-            <input type="checkbox" name="compass.enabled" {{checked enabled}}>
+            <input type="checkbox" name="{{flagPath}}.enabled" {{checked enabled}}>
         </label>
-        {{filePicker type="image" target="compass.src"}}
-        <input class="image" type="text" name="compass.src" placeholder="File Path" value="{{src}}">
+        {{filePicker id=(concat moduleID "-filePicker") type="image" target=(concat flagPath ".src")}}
+        <input class="image" type="text" name="{{flagPath}}.src" placeholder="File Path" value="{{src}}">
     </div>
     <p class="notes">{{ localize "which-way-is-north.sceneSettings.image.notes" }}</p>
 </div>
@@ -18,9 +18,9 @@
     <label>{{ localize "which-way-is-north.sceneSettings.dimensions.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.dimensions.unit" }})</span></label>
     <div class="form-fields">
         <label>{{ localize "which-way-is-north.sceneSettings.dimensions.formFields.width.label" }}</label>
-        <input type="number" step="any" name="compass.width" value="{{width}}">
+        <input type="number" step="any" name="{{flagPath}}.width" value="{{width}}">
         <label>{{ localize "which-way-is-north.sceneSettings.dimensions.formFields.height.label" }}</label>
-        <input type="number" step="any" name="compass.height" value="{{height}}">
+        <input type="number" step="any" name="{{flagPath}}.height" value="{{height}}">
     </div>
 </div>
 
@@ -29,7 +29,7 @@
     <label>{{ localize "which-way-is-north.sceneSettings.rotation.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.rotation.unit" }})</span></label>
     <div class="form-fields">
         <label>{{ localize "which-way-is-north.sceneSettings.rotation.formFields.rotation.label" }}</label>
-        <input type="number" step="1" name="compass.rot" value="{{rot}}">
+        <input type="number" step="1" name="{{flagPath}}.rot" value="{{rot}}">
     </div>
 </div>
 
@@ -37,7 +37,7 @@
 <div class="form-group">
     <label>{{ localize "which-way-is-north.sceneSettings.opacity.label" }} <span class="units">({{ localize "which-way-is-north.sceneSettings.opacity.unit" }})</span></label>
     <div class="form-fields">
-        {{rangePicker name="compass.opacity" value=opacity min="0" max="1" step="0.05"}}
+        {{rangePicker name=(concat flagPath ".opacity") value=opacity min="0" max="1" step="0.05"}}
     </div>
 </div>
 

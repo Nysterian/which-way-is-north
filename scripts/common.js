@@ -1,10 +1,10 @@
 export const moduleID = 'which-way-is-north';
-export const templateFile = 'modules/' + moduleID + '/templates/configForm.handlebars';
+export const templateFile = `modules/${moduleID}/templates/configForm.html`;
 export const defaultFlags = {
-    src: 'modules/' + moduleID + '/assets/images/compass.png',
+    src: `modules/${moduleID}/assets/images/compass.png`,
     rot: 0,
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     opacity: 0.5,
     enabled: false
 }
@@ -21,7 +21,7 @@ export function addElement(childOf, elementType, elementParams) {
 }
 
 export function editElement(elementID, elementParams) {
-    const element = document.querySelector('#' + elementID);
+    const element = document.querySelector(`#${elementID}`);
 
     if (element != null) applyParams(element, elementParams);
     return element
