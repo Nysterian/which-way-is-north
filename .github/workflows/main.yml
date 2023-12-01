@@ -24,7 +24,7 @@ jobs:
         fields: "{\"version\": \"${{env.VERSION}}\", \"manifest\": \"${{env.FOUNDRY_MANIFEST}}\", \"download\": \"${{env.FOUNDRY_DOWNLOAD}}\"}"
 
     # create a zip file with all files required by the module to add to the release
-    - run: ./release/module.zip module.json assets/ lang/ scripts/ templates/
+    - run: zip -r ./release/module.zip module.json assets/ lang/ scripts/ templates/
     # Create a release for this specific version
     - name: Update Release with Files
       id: create_version_release
